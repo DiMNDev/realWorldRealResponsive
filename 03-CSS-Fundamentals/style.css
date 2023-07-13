@@ -1,0 +1,263 @@
+* {
+  /* Universal selector */
+  margin: 0;
+  padding: 0;
+}
+
+/* This is NOT selecting all of the elements. The reason for its application is 
+Inheritance. Each descendent/child that does NOT have "font-family" or "color"
+defined within each elements selector will then inherit these properties from "body"
+which is the parent element.
+!Not every style is inherited, mostly styles related to text are inherited!
+*/
+/* Block Items */
+body {
+  font-family: sans-serif;
+  color: #444;
+  border-top: 10px solid #1098ad;
+  position: relative;
+}
+
+.container {
+  width: 800px;
+  /* NEATO! */
+  margin: 0 auto;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  margin-bottom: 60px;
+  padding: 20px 40px;
+  height: 80px;
+}
+
+nav {
+  font-size: 18px;
+  text-align: center;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+  /* position: relative; */
+}
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  /* Collapsing Margins: When margins "collide" the two margins "share" space
+  The larger margin will hold true and the lesser margin will "collapse" inside of
+  the larger margin.
+  */
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* footer p {
+  font-size: 16px;
+} */
+/* 
+article header p {
+  font-style: italic;
+} */
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related-posts {
+  list-style: none;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding: 50px 0;
+  width: 500px;
+}
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+li:nth-child(even) {
+  color: red;
+}
+/* Misconeption: does not work UNLESS the paragraph element IS the first child in the article element */
+article p:first-child {
+  color: red;
+}
+/* 
+a {
+  color: red;
+} */
+
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline wavy orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+/* Images and links are inline-boxes, unlike block-boxes, they are more conservative
+whenn it comes to screen real-estate.
+Block-Boxes - take up as much space as they can take
+Inline-Boxes - take up as little space as possible, just as much as they need.
+
+*/
+.postImg {
+  width: 100%;
+  height: auto;
+}
+
+nav a:link {
+  /* background-color: rebeccapurple;
+  margin: 10px;
+  padding: 10px;
+  display: inline-block; */
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+.likeBtn {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointen;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+/* Using the " + "  we can target the first line of each paragraph that is an 
+adjacent sibling to the "h3" element in this example*/
+h3 + p::first-line {
+  color: red;
+}
+
+h2 {
+  /* background-color: orange; */
+  position: relative;
+}
+
+h2::before {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
+
+/* Styling links psuedo classes in order: Link, Visited, Hover, Active. L.V.H.A. */
+
+/* Resolving conflicts */
+
+/* #copyright {
+  color: red;
+}
+
+.copyright {
+  color: blueviolet;
+}
+
+.text {
+  color: yellow;
+}
+
+footer p {
+  color: green !important;
+} */
