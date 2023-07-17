@@ -28,7 +28,7 @@ body {
   padding-left: 40px;
   padding-right: 40px; */
   padding: 20px 40px;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   /* height: 80px; */
 }
 
@@ -38,7 +38,7 @@ nav {
 }
 
 article {
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 .post-header {
@@ -314,8 +314,6 @@ footer {
   clear: both;
 } */
 
-/* FLEXBOX */
-
 .main-header {
   display: flex;
   align-items: center;
@@ -355,6 +353,7 @@ footer {
   font-style: italic;
 }
 
+/* FLEXBOX
 .row {
   display: flex;
   gap: 75px;
@@ -363,15 +362,41 @@ footer {
 }
 
 article {
-  /* 
+  
   flex-grow,
   flex-shrink,
   flex-basis 
-  */
+  
   flex: 1;
   margin-bottom: 0;
 }
 
 aside {
   flex: 0 0 300px;
+} */
+
+/* CSS GRID LAYOUT */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+
+.main-header {
+  /* grid-column: 1 / span 2; */
+  grid-column: 1 / -1;
+}
+
+article {
+}
+
+aside {
+}
+
+footer {
+  grid-column: 1 / -1;
+  /* background-color: crimson; */
 }
