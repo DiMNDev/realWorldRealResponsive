@@ -53,8 +53,8 @@
 
 .price {
   font-size: 24px;
-  margin-bottom: 2px;
-  float: left;
+  /* margin-bottom: 2px; */
+  /* float: left; */
 }
 
 .shipping {
@@ -62,19 +62,19 @@
   font-weight: bold;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.7);
-  margin-top: 5px;
-  float: right;
+  /* margin-top: 5px; */
+  /* float: right; */
 }
 
 .description {
-  clear: both;
+  /* clear: both; */
   margin-bottom: 10px;
 }
 
 .moreInfo:link {
   color: black;
   margin-bottom: 15px;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .moreInfo:visited {
@@ -92,21 +92,24 @@
 }
 
 .colorContainer {
-  align-items: center;
+  display: flex;
+  gap: 10px;
+  /* justify-content: space-between; */
+  /* align-items: center; */
 }
 
 .colors {
   width: 20px;
   height: 20px;
-  display: inline-block;
-  margin-right: 5px;
+  /* display: inline-block; */
+  /* margin-right: 5px; */
   cursor: pointer;
   transition: all 0.5s;
 }
 
 .colors:hover {
   transform: scale(1.4);
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 
 .color1 {
@@ -134,9 +137,10 @@
 }
 
 .detailsTitle {
-  margin-left: 0px;
+  /* margin-left: 0px; */
   text-transform: uppercase;
   font-size: 16px;
+  align-self: flex-start;
 }
 
 .detailsList {
@@ -166,29 +170,47 @@ li {
   cursor: pointer;
 }
 .contentContainer {
-  width: 720px;
-  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  /* background-color: aqua; */
+}
+
+.prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
 .productImg {
   width: 200px;
-  float: left;
+  /* float: left; */
 }
 
 .priceColorContainer {
-  width: 250px;
-  height: 200px;
-  float: left;
+  /* width: 250px;
+  height: 200px; */
+  /* float: left; */
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 20px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   /* background-color: blue; */
 }
 
 .detailsContainer {
-  width: 250px;
-  height: 200px;
-  float: left;
-  padding: 20px 20px;
-  margin-left: 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 250px; */
+  /* height: 200px; */
+  /* float: left; */
+  /* padding: 20px 20px; */
+  /* margin-left: 10px; */
   /* background-color: maroon; */
 }
